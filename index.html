@@ -399,9 +399,44 @@
                                 </label>
                             </label>
                         </div>
+                        <div class="column_questions">
+                            <label class="question" for="floor">Pavimento:<br><br>
+                                <label class="custom-radio">
+                                    <input type="radio" name="floor" id="cascalho" value="Cascalho" required>
+                                    <span>Cascalho</span>
+                                </label>
+                                <br>
+                                <label class="custom-radio">
+                                    <input type="radio" name="floor" id="em-bom-estado" value="Em bom estado" required>
+                                    <span>Em bom estado</span>
+                                </label>
+                                <br>
+                                <label class="custom-radio">
+                                    <input type="radio" name="floor" id="em-estado-regular" value="Em estado regular" required>
+                                    <span>Em estado regular</span>
+                                </label>
+                                <br>
+                                <label class="custom-radio">
+                                    <input type="radio" name="floor" id="em-manutencao" value="Em manutenção/obras" required>
+                                    <span>Em manutenção/obras</span>
+                                </label>
+                                <br>
+                                <label class="custom-radio">
+                                    <input type="radio" name="floor" id="em-mau-estado" value="Em mau estado" required>
+                                    <span>Em mau estado</span>
+                                </label>
+                                <br>
+                                <label class="custom-radio">
+                                    <input type="radio" name="floor" id="terra" value="Terra" required>
+                                    <span>Terra</span>
+                                </label>
+                            </label>
+                        </div>
                     <div class="subtitles"><p>DOCUMENTOS OBRIGATÓRIOS</p></div><br>
                         <label for="reportFile">Boletim de Ocorrência (PDF):</label>
-                        <input type="file" id="reportFile" name="reportFile" accept=".pdf" class="answer" required><br><br>
+                            <input type="file" id="reportFile" name="reportFile" accept=".pdf,.jpeg,.png,.jpg" class="answer" required><br><br>
+                        <label for="photos">Fotos do Acidente (JPEG, JPG, PNG):</label>
+                            <input type="file" id="photos" name="photos" accept=".jpeg,.jpg,.png" class="answer" multiple required><br><br>
             </fieldset>
         </form>
     </div>
