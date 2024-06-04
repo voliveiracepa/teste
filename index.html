@@ -294,15 +294,31 @@
 <body>
     <div class="container">
         <div class="images-container">
-                <div class="left-image">
-                    <img src="https://raw.githubusercontent.com/voliveiracepa/teste/master/CEPA-MOBILITY_logo-principal%20750px.png" alt="Imagem 1" class="image">
-                </div>
-                <div class="center-image">
-                    <img src="https://raw.githubusercontent.com/voliveiracepa/teste/master/fdm_pro.png" alt="Imagem 2" class="image">
-                </div>
-                <div class="right-images">
-                    <img src="https://raw.githubusercontent.com/voliveiracepa/teste/master/brazil-.png" alt="Imagem 3" class="image">    
-                </div>
+            <div class="left-image">
+                <img src="https://raw.githubusercontent.com/voliveiracepa/teste/master/CEPA-MOBILITY_logo-principal%20750px.png" alt="Imagem 1" class="image">
+            </div>
+            <div class="center-image">
+                <img src="https://raw.githubusercontent.com/voliveiracepa/teste/master/fdm_pro.png" alt="Imagem 2" class="image">
+            </div>
+            <div class="right-images">
+                <img src="https://raw.githubusercontent.com/voliveiracepa/teste/master/brazil-.png" alt="Imagem 3" class="image">    
+            </div>
+            <form id="eventForm" action="{{ url_for('submit') }}" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <div class="titles"><p>COMUNICAÇÃO DE ACIDENTE COM VEÍCULO DA FROTA</p></div><br>
+                        <div>
+                            <div class="subtitles"><p>DADOS DO CONDUTOR / VEÍCULO</p></div><br>
+                                <div class="column">
+                                    <label class="question" for="driver_name">Nome:</label>
+                                        <input type="text" id="driver_name" name="driver_name" class="answer" required><br><br>
+                                    <label class="question" for="driver_email">E-mail:</label>
+                                        <input type="text" id="driver_email" name="driver_email" class="answer" required><br><br>
+                                    <label for="id_corp">ID da Corporação:</label>
+                                        <input type="text" id="id_corp" name="id_corp" class="answer1" required><br><br>
+                                </div>
+                        </div>
+                </fieldset>
+            </form>
         </div>
     </div>
 </body>
