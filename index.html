@@ -527,6 +527,52 @@
                 </div>
             </div>
         </form>
+        <script>
+            function validateForm() {
+                var requiredFields = document.querySelectorAll('[required]');
+                var isValid = true;
+                requiredFields.forEach(function(field) {
+                    if (!field.value) {
+                        field.classList.add('error');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('error');
+                    }
+                });
+    
+                if (!isValid) {
+                    alert('Por favor, preencha todos os campos obrigatórios.');
+                    return false;
+                }
+    
+                // Verificar se todos os botões de rádio obrigatórios foram selecionados
+                var radioGroups = {
+                    'at_working': 'No momento do acidente estava a serviço da Companhia?',
+                    'evitable': 'Considera-se responsável pelo acidente?',
+                    'lightning': 'Iluminação',
+                    'floor': 'Pavimento',
+                    'floor_condition': 'Condição'
+                };
+    
+                for (var groupName in radioGroups) {
+                    var radios = document.getElementsByName(groupName);
+                    var isGroupChecked = Array.from(radios).some(radio => radio.checked);
+                    if (!isGroupChecked) {
+                        isValid = false;
+                        alert('Por favor, selecione uma opção para a pergunta: ' + radioGroups[groupName]);
+                        break;
+                    }
+                }
+    
+                return isValid;
+            }
+    
+            document.getElementById('eventForm').addEventListener('submit', function(event) {
+                if (!validateForm()) {
+                    event.preventDefault();
+                }
+            });
+        </script>
     </div>
 </body>
 </html>
