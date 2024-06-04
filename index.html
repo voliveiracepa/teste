@@ -490,7 +490,7 @@
                             <input type="file" id="photos" name="photos" accept=".jpeg,.jpg,.png" class="answer" multiple required><br><br>
             </fieldset>
             <br>
-            <button type="button" class="submit-button">Enviar</button>
+            <button type="button" class="submit-button" onclick="handleFormSubmit()">Enviar</button>
             <div id="myModal" class="modal">
                 <!-- Conteúdo do modal -->
                 <div class="modal-content">
@@ -609,13 +609,7 @@
                 document.getElementById('confirmedEventDate').innerText = eventDate;
                 document.getElementById('confirmedEventTime').innerText = eventTime;
                 document.getElementById('confirmedEventPlace').innerText = eventPlace;
-                document.getElementById('confirmedEventState').innerText = eventState;
-                // document.getElementById('confirmedEvitable').innerText = eventEvitable;
-    
-                // document.getElementById('confirmedLightining').innerText = Lightning;
-                // document.getElementById('confirmedFloor').innerText = Floor;
-                // document.getElementById('confirmedFloorCondition').innerText = FloorCondition;
-    
+                document.getElementById('confirmedEventState').innerText = eventState;    
                 document.getElementById('confirmedEventDescription').innerText = eventDescription;
         
                 // Abrindo o modal
