@@ -491,6 +491,41 @@
             </fieldset>
             <br>
             <button type="button" class="submit-button">Enviar</button>
+            <div id="myModal" class="modal">
+                <!-- Conteúdo do modal -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div class="subtitles"><p>Confirmação dos dados</p></div>
+                    <div class="column-modal">
+                        <div class="subtitles-modal"><p>Dados do Condutor / Veículo</p></div>
+                        <p><strong>Nome:</strong> <span id="confirmedDriverName"></span></p>
+                        <p><strong>Email:</strong> <span id="confirmedDriverEmail"></span></p>
+                        <p><strong>ID da Corporação:</strong> <span id="confirmedDriverIdCorp"></span></p>
+                        <p><strong>Nº. chamado ALD:</strong> <span id="confirmedAldNumber"></span></p>
+                        <p><strong>Data de Nascimento:</strong> <span id="confirmedBirthDate"></span></p>
+                        <p><strong>Data de Ingresso na Cia.:</strong> <span id="confirmedJoiningDate"></span></p>
+                        <p><strong>Placa do Veículo:</strong> <span id="confirmedPlateID"></span></p>
+                    </div>
+                    <div class="column-modal">
+                        <div class="subtitles-modal"><p>Dados do Evento</p></div>
+                        <p><strong>Data:</strong> <span id="confirmedEventDate"></span></p>
+                        <p><strong>Hora:</strong> <span id="confirmedEventTime"></span></p>
+                        <p><strong>Local:</strong> <span id="confirmedEventPlace"></span></p>
+                        <p><strong>Estado:</strong> <span id="confirmedEventState"></span></p>
+                        <p><strong>No momento do acidente estava a serviço da Companhia?</strong> <span id="confirmedAtWorking"></span></p>
+                        <p><strong>Considera-se responsável pelo acidente?</strong> <span id="confirmedEvitable"></span></p>
+                    </div>
+                    <div class="column-modal">
+                        <div class="subtitles-modal"><p>Condições de Pavimento</p></div>
+                        <p><strong>Iluminação:</strong> <span id="confirmedLightning"></span></p>
+                        <p><strong>Pavimento:</strong> <span id="confirmedFloor"></span></p>
+                        <p><strong>Condição:</strong> <span id="confirmedFloorCondition"></span></p>
+                        <div class="subtitles-modal"><p>Relato do Evento</p></div>
+                        <p><span id="confirmedEventDescription"></span></p>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </div>
+            </div>
         </form>
     </div>
 </body>
