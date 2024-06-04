@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+        .header {
+            background-color: #8D0056;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        .form_box{
+            border: 1px solid #ff5e00f3; /* Define a largura e a cor da borda */
+            border-radius: 5px; /* Define o arredondamento das bordas */
+            padding: 10px; /* Adiciona algum espaçamento interno, opcional */
+        }
+
+        .intro-text {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #555;
+            text-align: justify;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 3px;
+        }
+        .column {
+            display: inline-block;
+            width: 45%;
+            padding: 10px;
+            vertical-align: top;
+            margin-right: 5px;
+            border-right: 1px solid #ccc; /* Linha vertical de separação */
+        }
+
+        .column_questions {
+            display: inline-block;
+            width: 30%;
+            padding: 10px;
+            vertical-align: top;
+            margin-right: 5px;
+            border-right: 1px solid #ccc; /* Linha vertical de separação */
+        }
+        
+        .custom-radio {
+            display: inline-block;
+            background-color: #ffffff; /* Cor de fundo */
+            color: #8D0056; /* Cor das letras */
+            padding: 0px; /* Espaçamento interno para tornar os botões retangulares */
+            border-radius: 5px; /* Bordas arredondadas */
+            border: 2px solid #ff5e00f3;
+            margin: 5px; /* Espaçamento entre os botões */
+            cursor: pointer; /* Cursor de ponteiro para indicar clicável */
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transição suave para mudanças de fundo */
+        }
+
+        .custom-radio:hover {
+            background-color: #ff5e00f3; /* Cor de fundo ao passar o mouse */
+            color: white; /* Cor das letras ao passar o mouse */
+        }
+
+        .custom-radio input[type="radio"] {
+            display: none; /* Esconde o input original do radio button */
+        }
+
+        .custom-radio input[type="radio"]:checked + span {
+            background-color: #ff5e00f3; /* Cor de fundo quando o radio button está selecionado */
+            color: white; /* Cor das letras quando selecionado */
+        }
+
+        .custom-radio span {
+            display: inline-block;
+            padding: 10px 20px; /* Mantém o espaçamento interno */
+            border-radius: 5px; /* Mantém as bordas arredondadas */
+            transition: background-color 0.3s, color 0.3s; /* Transição suave para mudanças de fundo e cor */
+        }
+        .question {
+            background-color: #ffffff;
+            font-size: 16px;
+	        text-align: justify;
+        }
+        .answer {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+	        height: 20px; /* Defina a altura desejada */
+	        word-wrap: break-word;
+    	    overflow: auto;
+    	    white-space: pre-wrap; 
+        }
+        .answer1 {
+            width: 40%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+	        height: 20px; /* Defina a altura desejada */
+	        word-wrap: break-word;
+    	    overflow: auto;
+    	    white-space: pre-wrap; 
+        }
+
+       .submit-button {
+            background-color: #ff5e00f3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .submit-button:hover {
+            background-color: #ff5e00f3;
+        }
+
+	    .images-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .left-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .center-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .right-images {
+            flex: 1;
+            text-align: right;
+        }
+
+        .titles{
+            background-color: #ff5e00f3;
+            color: white;
+            padding:1px;
+            font-size: 20px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-bottom: 0px;
+        }
+
+        .subtitles{
+            background-color: #ff5e00f3;
+            color: white;
+            padding:1px;
+            font-size: 16px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-bottom: 0px;
+        }
+
+        .subtitles-modal{
+            background-color: #999999bb;
+            color: white;
+            padding:1px;
+            font-size: 14px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-bottom: 0px;
+        }
+
+        .button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .error {
+            border: 2px solid red;
+        }
+        .modal {
+            /* display: none;  Oculta o modal por padrão */
+            position: fixed; /* Mantém o modal fixo na tela */
+            z-index: 1; /* Define a ordem de empilhamento do modal */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Adiciona rolagem se o conteúdo for maior que a tela */
+            background-color: rgba(0,0,0,0.4); /* Fundo escuro semi-transparente */
+        }
+
+        .column-modal {
+            display: inline-block;
+            width: 30%;
+            padding: 10px;
+            vertical-align: top;
+            margin-right: 5px;
+            border-right: 1px solid #ccc; /* Linha vertical de separação */
+            color: black;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Estilo do conteúdo do modal */
+        .modal-content {
+            background-color: #fefefe; /* Cor do fundo do modal */
+            margin: 15% auto; /* Centraliza verticalmente o modal */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Largura do modal */
+            max-width: 1000px; /* Largura máxima do modal */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra do modal */
+            position: relative; /* Posição relativa para facilitar o posicionamento de elementos internos */
+        }
+
+        /* Estilo do botão de fechar do modal */
+        .close {
+            color: white;
+            margin: 7px;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .custom-select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .text-field {
+            width: 600px; /* Tamanho fixo desejado */
+            height: 50px; /* Altura fixa desejada */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: none; /* Impede redimensionamento */
+        }
+        .align {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="images-container">
+                <div class="left-image">
+                    <img src="C:\Users\vinicius oshiro\PycharmProjects\CEPA\cepa\CEPA-MOBILITY_logo-principal 750px.png" alt="Imagem 1" class="image">
+                </div>
+                <div class="center-image">
+                    <img src="C:\Users\vinicius oshiro\PycharmProjects\CEPA\cepa\fdm_pro.png" alt="Imagem 2" class="image">
+                </div>
+                <div class="right-images">
+                    <img src="C:\Users\vinicius oshiro\PycharmProjects\CEPA\cepa\brazil-.png" alt="Imagem 3" class="image">    
+                </div>
+        </div>
+    </div>
+</body>
+</html>
