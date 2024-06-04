@@ -573,6 +573,82 @@
                 }
             });
         </script>
+        <script>
+            // Função para abrir o modal e exibir os dados inseridos
+            function openModal() {
+                // Acessando os valores dos campos do formulário
+                var driverName = document.getElementById('driver_name').value;
+                var driverEmail = document.getElementById('driver_email').value;
+                var driverIdCorp = document.getElementById('id_corp').value;
+                var aldNumber = document.getElementById('ald_number').value;
+                var birthDate = document.getElementById('birth_date').value;
+                var joiningDate = document.getElementById('joining_date').value;
+                var plateID = document.getElementById('plate').value;
+    
+                var eventDate = document.getElementById('event_date').value;
+                var eventTime = document.getElementById('event_time').value;
+                var eventPlace = document.getElementById('event_place').value;
+                var eventState = document.getElementById('event_state').value;
+                // var eventEvitable = document.getElementById('evitable').value;
+    
+                // var Lightning = document.getElementById('lightning').value;
+                // var Floor = document.getElementById('floor').value;
+                // var FloorCondition = document.getElementById('floor_condition').value;
+    
+                var eventDescription = document.getElementById('event_description').value;
+        
+                // Inserindo os valores no modal
+                document.getElementById('confirmedDriverName').innerText = driverName;
+                document.getElementById('confirmedDriverEmail').innerText = driverEmail;
+                document.getElementById('confirmedDriverIdCorp').innerText = driverIdCorp;
+                document.getElementById('confirmedAldNumber').innerText = aldNumber;
+                document.getElementById('confirmedBirthDate').innerText = birthDate;
+                document.getElementById('confirmedJoiningDate').innerText = joiningDate;
+                document.getElementById('confirmedPlateID').innerText = plateID;
+    
+                document.getElementById('confirmedEventDate').innerText = eventDate;
+                document.getElementById('confirmedEventTime').innerText = eventTime;
+                document.getElementById('confirmedEventPlace').innerText = eventPlace;
+                document.getElementById('confirmedEventState').innerText = eventState;
+                // document.getElementById('confirmedEvitable').innerText = eventEvitable;
+    
+                // document.getElementById('confirmedLightining').innerText = Lightning;
+                // document.getElementById('confirmedFloor').innerText = Floor;
+                // document.getElementById('confirmedFloorCondition').innerText = FloorCondition;
+    
+                document.getElementById('confirmedEventDescription').innerText = eventDescription;
+        
+                // Abrindo o modal
+                var modal = document.getElementById('myModal');
+                modal.style.display = "block";
+            }
+    
+            function handleFormSubmit() {
+                if (validateForm()) {
+                    openModal();
+                }
+            }
+        
+            // Função para fechar o modal
+            function closeModal() {
+                var modal = document.getElementById('myModal');
+                modal.style.display = "none";
+            }
+        
+            // Fechar o modal quando o usuário clicar no botão de fechar
+            var closeBtn = document.getElementsByClassName('close')[0];
+            closeBtn.onclick = function() {
+                closeModal();
+            }
+        
+            // Fechar o modal quando o usuário clicar fora do conteúdo do modal
+            window.onclick = function(event) {
+                var modal = document.getElementById('myModal');
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+        </script>
     </div>
 </body>
 </html>
