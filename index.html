@@ -649,6 +649,111 @@
                 }
             }
         </script>
+        <script>
+            var radioSim = document.getElementById('radio-sim');
+            var radioNao = document.getElementById('radio-nao');
+            var confirmedAtWorking = document.getElementById('confirmedAtWorking');
+        
+            radioSim.addEventListener('change', function() {
+                confirmedAtWorking.innerText = radioSim.value;
+            });
+        
+            radioNao.addEventListener('change', function() {
+                confirmedAtWorking.innerText = radioNao.value;
+            });
+        </script>
+        <script>
+            var radioSimEvit = document.getElementById('radio-sim-evitable');
+            var radioNaoEvit = document.getElementById('radio-nao-evitable');
+            var confirmedEvitable = document.getElementById('confirmedEvitable');
+        
+            radioSimEvit.addEventListener('change', function() {
+                confirmedEvitable.innerText = radioSimEvit.value;
+            });
+        
+            radioNaoEvit.addEventListener('change', function() {
+                confirmedEvitable.innerText = radioNaoEvit.value;
+            });
+        </script>
+        <script>
+            var radioEscuro = document.getElementById('escuro');
+            var radioLuzArtificial = document.getElementById('luz-artificial');
+            var radioPenumbrar = document.getElementById('penumbra');
+            var radioPlenoDia = document.getElementById('pleno-dia');
+            var confirmedLightning = document.getElementById('confirmedLightning');
+        
+            radioEscuro.addEventListener('change', function() {
+                confirmedLightning.innerText = radioEscuro.value;
+            });
+        
+            radioLuzArtificial.addEventListener('change', function() {
+                confirmedLightning.innerText = radioLuzArtificial.value;
+            });
+        
+            radioPenumbrar.addEventListener('change', function() {
+                confirmedLightning.innerText = radioPenumbrar.value;
+            });
+        
+            radioPlenoDia.addEventListener('change', function() {
+                confirmedLightning.innerText = radioPlenoDia.value;
+            });
+        </script>
+        <script>
+            var radioCascalho = document.getElementById('cascalho');
+            var radioEmBomEstado = document.getElementById('em-bom-estado');
+            var radioEmEstadoRegular = document.getElementById('em-estado-regular');
+            var radioEmManutencao = document.getElementById('em-manutencao');
+            var radioEmMauEstado = document.getElementById('em-mau-estado');
+            var radioTerra = document.getElementById('terra');
+            var confirmedFloor = document.getElementById('confirmedFloor');
+        
+            radioCascalho.addEventListener('change', function() {
+                confirmedFloor.innerText = radioCascalho.value;
+            });
+        
+            radioEmBomEstado.addEventListener('change', function() {
+                confirmedFloor.innerText = radioEmBomEstado.value;
+            });
+        
+            radioEmEstadoRegular.addEventListener('change', function() {
+                confirmedFloor.innerText = radioEmEstadoRegular.value;
+            });
+        
+            radioEmManutencao.addEventListener('change', function() {
+                confirmedFloor.innerText = radioEmManutencao.value;
+            });
+        
+            radioEmMauEstado.addEventListener('change', function() {
+                confirmedFloor.innerText = radioEmMauEstado.value;
+            });
+        
+            radioTerra.addEventListener('change', function() {
+                confirmedFloor.innerText = radioTerra.value;
+            });
+        </script>
+        <script>
+            var radioEmReparacao = document.getElementById('em-reparacao');
+            var radioEscorregadio = document.getElementById('escorregadio');
+            var radioSeco = document.getElementById('seco');
+            var radioUmido = document.getElementById('umido');
+            var confirmedFloorCondition = document.getElementById('confirmedFloorCondition');
+        
+            radioEmReparacao.addEventListener('change', function() {
+                confirmedFloorCondition.innerText = radioEmReparacao.value;
+            });
+        
+            radioEscorregadio.addEventListener('change', function() {
+                confirmedFloorCondition.innerText = radioEscorregadio.value;
+            });
+        
+            radioSeco.addEventListener('change', function() {
+                confirmedFloorCondition.innerText = radioSeco.value;
+            });
+        
+            radioUmido.addEventListener('change', function() {
+                confirmedFloorCondition.innerText = radioUmido.value;
+            });
+        </script>
     </div>
 </body>
 </html>
