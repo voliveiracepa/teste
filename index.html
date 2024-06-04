@@ -367,6 +367,13 @@
                                 <option value="TO">Tocantins</option>
                             </select>
                         </div>
+                        <br>
+                        <br>
+                        <div class="align">
+                            <label class="question" for="event_description">Descrição do Evento:</label>
+                            <textarea class="text-field" id="event_description" name="event_description" placeholder="Descreva aqui o relato do acidente" required></textarea>
+                        </div>
+                        <br>
                     </div>
                     <div class="subtitles"><p>CONDIÇÕES DE PAVIMENTO</p></div><br>
                         <div class="column_questions">
@@ -393,6 +400,8 @@
                             </label>
                         </div>
                     <div class="subtitles"><p>DOCUMENTOS OBRIGATÓRIOS</p></div><br>
+                        <label for="reportFile">Boletim de Ocorrência (PDF):</label>
+                        <input type="file" id="reportFile" name="reportFile" accept=".pdf" class="answer" required><br><br>
             </fieldset>
         </form>
     </div>
